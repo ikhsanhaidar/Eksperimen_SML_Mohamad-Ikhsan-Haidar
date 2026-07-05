@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "breast_cancer_raw.csv"
-      - "preprocessing/automate_Nama-siswa.py"
+      - "preprocessing/automate_Mohamad-Ikhsan-Haidar.py"
   workflow_dispatch: {}
 
 jobs:
@@ -29,8 +29,7 @@ jobs:
       - name: Run automated preprocessing
         working-directory: preprocessing
         run: |
-          python automate_Nama-siswa.py --input ../breast_cancer_raw.csv --output breast_cancer_preprocessing
-
+          python automate_Mohamad-Ikhsan-Haidar.py --input ../breast_cancer_raw.csv --output breast_cancer_preprocessing
       - name: Commit and push preprocessed dataset
         run: |
           git config --global user.name "github-actions[bot]"
